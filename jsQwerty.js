@@ -165,13 +165,14 @@ Keyboard.prototype.keyTyped = function (evt) {
 };
 
 Keyboard.prototype.show = function (inputElem) {
+	this.currentTarget = inputElem;
 	if (this.shown) {
 		return;
 	}
 	this.bottom = -400;
 	this.kbd.style.bottom = this.bottom + 'px';
 	this.kbd.style.display = 'block';
-	this.currentTarget = inputElem;
+	
 	
 	var _this = this;
 	
@@ -214,10 +215,6 @@ window.attachKeyboard = function (inputElems) {
 		addEventHandler(inputElems[i], 'focus', function () {
 			kbd.show.call(kbd, this);
 		});
-		/*
-		inputElems[i].addEventListener('focus', function () {
-			kbd.show.call(kbd, this);
-		});*/
 	}
 };
 
