@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jsQwerty Demo</title>
+		<link rel="stylesheet" type="text/css" href="jsQwerty.css"/>
+		<style>
+			body {
+				text-align: center; 
+				font-size: 24pt; 
+				font-family: 'Arial'; 
+				padding: 50px;
+			}
+			
+			input {
+				font-size: 24pt;
+				font-family: 'Arial';
+				border-radius: 10px;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		Input 1: <input type="text" id="txt1"/>
+		<br>
+		Input 2: <input type="text" id="txt2"/>
+	</body>
+	<script src="jsQwerty.js"></script>
+	<script>
+		// attach keyboard to input elements
+		attachKeyboard( [ document.getElementById('txt1'), document.getElementById('txt2') ] );
+	</script>
+</html>
