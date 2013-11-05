@@ -225,3 +225,4 @@ window.addEventHandler = function (elem, evt, handler) {
 		elem.attachEvent('on' + evt, handler);
 	}
 };
+
